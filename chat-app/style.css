@@ -1,0 +1,136 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Space for navbar */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #f0f0f0;
+  padding: 1rem;
+}
+
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.info-panel {
+  width: 200px;
+  background: #f8f9fa;
+  padding: 1rem;
+}
+
+/* Chat Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.chat-header .avatar {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #e9ecef;
+}
+.bubble {
+  max-width: 70%;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+.bubble.user {
+  background: #0d6efd;
+  color: white;
+  align-self: flex-end;
+}
+.bubble.bot {
+  background: #dee2e6;
+  align-self: flex-start;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  min-height: 40px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+.chat-input button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar,
+  .info-panel {
+    display: none;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
