@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Chat App</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Top Navbar -->
-  <header class="navbar">ChatApp</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <header class="navbar">ChatApp</header>
 
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Left Sidebar -->
-    <aside class="sidebar">Menu</aside>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <h3>Chats</h3>
+        <ul class="chat-list">
+          <li class="chat-user active" data-name="Alice" data-online="true">
+            Alice <span class="online"></span>
+          </li>
+          <li class="chat-user" data-name="Bob" data-online="true">
+            Bob <span class="online"></span>
+          </li>
+          <li class="chat-user" data-name="Charlie" data-online="false">
+            Charlie
+          </li>
+        </ul>
+      </aside>
 
-    <!-- Chat Area -->
-    <main class="chat-panel">
-      <div class="chat-header">
-        <img src="https://i.pravatar.cc/40" alt="Bot" class="avatar" />
-        <h2>Chat with Bot</h2>
-      </div>
+      <!-- Chat Area -->
+      <main class="chat-panel">
+        <div class="chat-header" id="chatHeader">
+          <img src="https://i.pravatar.cc/40" alt="Bot" class="avatar" />
+          <h2 id="chatUserName">Chat with Alice</h2>
+        </div>
 
-      <div class="chat-area" id="chatArea"></div>
+        <div class="chat-area" id="chatArea"></div>
 
-      <div class="chat-input">
-        <textarea id="userInput" placeholder="Type a message..."></textarea>
-        <button id="sendBtn">Send</button>
-      </div>
-    </main>
+        <div class="chat-input">
+          <textarea id="userInput" placeholder="Type a message..."></textarea>
+          <button id="sendBtn">Send</button>
+        </div>
+      </main>
 
-    <!-- Right Info Panel -->
-    <section class="info-panel">Right Panel</section>
-  </div>
+      <!-- Right Info Panel -->
+      <section class="info-panel">Right Panel</section>
+    </div>
 
-  <!-- Footer -->
-  <footer class="footer">© 2025 ChatApp</footer>
+    <!-- Footer -->
+    <footer class="footer">© 2025 ChatApp</footer>
 
-  <!-- JavaScript File -->
-  <script src="script.js"></script>
-</body>
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+  </body>
 </html>

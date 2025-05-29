@@ -64,6 +64,44 @@ body {
   margin-right: 1rem;
 }
 
+/* Sidebar User List */
+.chat-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+.chat-user {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.chat-user:hover,
+.chat-user.active {
+  background: #dbeafe;
+}
+.online {
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e; /* green */
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+/* Sticky Chat Header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+
 /* Chat Area */
 .chat-area {
   flex: 1;
