@@ -9,6 +9,11 @@
   <body>
     <!-- Top Navbar -->
     <header class="navbar">ChatApp</header>
+    <button id="darkModeToggle">🌙</button>
+
+
+    <!-- Toggle button for mobile sidebar -->
+    <button class="toggle-sidebar" id="toggleSidebarBtn">☰</button>
 
     <!-- Main Container -->
     <div class="container">
@@ -17,26 +22,70 @@
         <h3>Chats</h3>
         <ul class="chat-list">
           <li class="chat-user active" data-name="Alice" data-online="true">
-            Alice <span class="online"></span>
+            <div class="chat-item">
+              <div class="avatar-wrapper">
+                <img src="https://i.pravatar.cc/40?u=alice" class="chat-avatar" />
+                <span class="online-indicator"></span>
+              </div>
+              <div class="chat-details">
+                <div class="chat-top">
+                  <span class="chat-name">Alice</span>
+                  <span class="chat-time">12:11 PM</span>
+                </div>
+                <div class="chat-preview">Hey, how are you?</div>
+              </div>
+            </div>
           </li>
+
           <li class="chat-user" data-name="Bob" data-online="true">
-            Bob <span class="online"></span>
+            <div class="chat-item">
+              <div class="avatar-wrapper">
+                <img src="https://i.pravatar.cc/40?u=bob" class="chat-avatar" />
+                <span class="online-indicator"></span>
+              </div>
+              <div class="chat-details">
+                <div class="chat-top">
+                  <span class="chat-name">Bob</span>
+                  <span class="chat-time">Yesterday</span>
+                </div>
+                <div class="chat-preview">See you tomorrow!</div>
+              </div>
+            </div>
           </li>
+
           <li class="chat-user" data-name="Charlie" data-online="false">
-            Charlie
+            <div class="chat-item">
+              <div class="avatar-wrapper">
+                <img src="https://i.pravatar.cc/40?u=charlie" class="chat-avatar" />
+              </div>
+              <div class="chat-details">
+                <div class="chat-top">
+                  <span class="chat-name">Charlie</span>
+                  <span class="chat-time">Mon</span>
+                </div>
+                <div class="chat-preview">Let's catch up!</div>
+              </div>
+            </div>
           </li>
         </ul>
       </aside>
 
       <!-- Chat Area -->
       <main class="chat-panel">
+        <!-- Chat Header -->
         <div class="chat-header" id="chatHeader">
-          <img src="https://i.pravatar.cc/40" alt="Bot" class="avatar" />
-          <h2 id="chatUserName">Chat with Alice</h2>
+          <div class="avatar-wrapper large">
+            <img src="https://i.pravatar.cc/40?u=alice" class="chat-avatar" />
+            <span class="online-indicator"></span>
+            <span class="online-text">Online</span>
+          </div>
+          <h2 id="chatUserName">Alice</h2>
         </div>
 
+        <!-- Messages -->
         <div class="chat-area" id="chatArea"></div>
 
+        <!-- Input -->
         <div class="chat-input">
           <textarea id="userInput" placeholder="Type a message..."></textarea>
           <button id="sendBtn">Send</button>
