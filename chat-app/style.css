@@ -249,7 +249,9 @@ body {
   background: #f0f0f0;
   text-align: center;
   padding: 0.7rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: blue;
+  font-weight: 700;
 }
 
 /* Responsive Styles */
@@ -283,10 +285,12 @@ body {
   }
 }
 /* dark */
+/* ========== Dark Mode ========== */
 body.dark {
-  background: #121212;
+  background-color: #121212;
   color: #f0f0f0;
 }
+
 body.dark .navbar,
 body.dark .chat-panel,
 body.dark .sidebar,
@@ -297,9 +301,26 @@ body.dark .chat-input {
   color: #f0f0f0;
   border-color: #333;
 }
+
 body.dark .bubble.bot {
   background: #333;
 }
+
 body.dark .bubble.user {
   background: #0d6efd;
+}
+
+body.dark .chat-user:hover,
+body.dark .chat-user.active {
+  background: #334155;
+}
+
+body.dark .chat-preview,
+body.dark .chat-time {
+  color: #aaa;
+}
+
+body.dark .footer {
+  background: #1e1e1e;
+  color: #ccc;
 }
